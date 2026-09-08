@@ -2,7 +2,6 @@ import chalk from 'chalk';
 import randomColor from 'randomcolor';
 
 // User input
-
 const hue = process.argv[2];
 const luminosity = process.argv[3];
 
@@ -48,9 +47,12 @@ const makeHexBlock = function (hexColorCode) {
 const color = chalk.hex(hexColor);
 
 // Logic
+
+// No input, random color
 if (!hue || !luminosity) {
   console.log(color(makeHexBlock(hexColor)));
 } else {
+  // Unknown input and error message
   if (
     (hue !== 'green' && hue !== 'red' && hue !== 'blue') ||
     (luminosity !== 'light' && luminosity !== 'dark')
@@ -58,7 +60,9 @@ if (!hue || !luminosity) {
     console.log(
       `Unknown Input ${hue} | ${luminosity}: First input needs to be hue. Use the key words "green", "red" or "blue". Second Input needs to be luminosity. Use the keywords "light" or "dark"`,
     );
-  } else {
+  }
+  // User input given, specific random color
+  else {
     const colorSpecific = randomColor({
       luminosity: luminosity,
       hue: hue,
