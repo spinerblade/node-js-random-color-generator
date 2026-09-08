@@ -21,11 +21,15 @@ const luminosity = process.argv[3];
 const hexColor = randomColor();
 
 // Create the block with hexcode inside
-const makeHexBlock = function (hexColor) {
+const makeHexBlock = function (hexColorCode) {
   const fullLine = '#'.repeat(31);
   const emptyMiddleLine = '#'.repeat(5) + ' '.repeat(21) + '#'.repeat(5);
   const hexMiddleLine =
-    '#'.repeat(5) + ' '.repeat(7) + hexColor + ' '.repeat(7) + '#'.repeat(5);
+    '#'.repeat(5) +
+    ' '.repeat(7) +
+    hexColorCode +
+    ' '.repeat(7) +
+    '#'.repeat(5);
 
   return [
     fullLine,

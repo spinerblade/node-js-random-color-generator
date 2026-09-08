@@ -119,6 +119,9 @@ importers:
       '@types/node':
         specifier: ^26.4.0
         version: 26.4.0
+      '@types/randomcolor':
+        specifier: ^0.5.9
+        version: 0.5.9
       eslint:
         specifier: ^10.9.1
         version: 10.9.1
@@ -369,6 +372,9 @@ packages:
 
   '@types/node@26.4.0':
     resolution: {integrity: sha512-faiGnoIrLH/V8cibOMEAZ8pMw6oXqSukl29ra4mN8GdaB2ZewzeaLj+INpV5N+Z1eKWzY+IzaIZH2EIR6YZRNQ==}
+
+  '@types/randomcolor@0.5.9':
+    resolution: {integrity: sha512-k58cfpkK15AKn1m+oRd9nh5BnuiowhbyvBBdAzcddtARMr3xRzP0VlFaAKovSG6N6Knx08EicjPlOMzDejerrQ==}
 
   '@types/react-dom@19.2.5':
     resolution: {integrity: sha512-fMPwH9v7r/pp43yUd2/Mbiex5KouJwwR3dzHkhLREUC6764VyDsqxhAxv6OFEYR1RhjOyD1naqba8ECDBe7ZQg==}
@@ -2082,6 +2088,8 @@ snapshots:
   '@types/node@26.4.0':
     dependencies:
       undici-types: 8.3.0
+
+  '@types/randomcolor@0.5.9': {}
 
   '@types/react-dom@19.2.5(@types/react@19.2.18)':
     dependencies:
