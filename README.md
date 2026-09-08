@@ -4,19 +4,12 @@ Generate random colors in the command line in form of a block containing '#'
 
 Running the program without any input will show a block of 31x9 '#' in a random color and the Hexcode of that color:
 
-```bash
-$ node index.js
+![randomColor](/screenshots/randomColor.png)
 
-```
+If the user inputs hue (green or red or blue) and luminosity (light or dark), the program will show the block in a random color matching those choices, including the Hexcode of that color:
 
-If the user inputs hue (green or red or blue) and luminosity (light or dark), the program will show the block with a random color matching those choices, including the Hexcode of that color:
+![specificColor](/screenshots/specificColor.png)
 
-```bash
-$ node index.js red
+Entering incorrect input value will result into error message:
 
-```
-
-```bash
-$ node index.js blue dark
-
-```
+![errorMessage](/screenshots/errorMessage.png)
