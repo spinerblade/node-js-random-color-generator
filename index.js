@@ -56,13 +56,13 @@ if (!hue || !luminosity) {
     (luminosity !== 'light' && luminosity !== 'dark')
   ) {
     console.log(
-      'Unknown Input: First input needs to be hue. Use the key words "green", "red" or "blue". Second Input needs to be luminosity. Use the keywords "light" or "dark"',
+      `Unknown Input ${hue} | ${luminosity}: First input needs to be hue. Use the key words "green", "red" or "blue". Second Input needs to be luminosity. Use the keywords "light" or "dark"`,
     );
   } else {
-    const color2 = randomColor({
+    const colorSpecific = randomColor({
       luminosity: luminosity,
       hue: hue,
     });
-    console.log(chalk.hex(color2)(makeHexBlock(hexColor)));
+    console.log(chalk.hex(colorSpecific)(makeHexBlock(hexColor)));
   }
 }
