@@ -108,6 +108,13 @@ settings:
 importers:
 
   .:
+    dependencies:
+      chalk:
+        specifier: ^6.0.0
+        version: 6.0.0
+      randomcolor:
+        specifier: ^0.6.2
+        version: 0.6.2
     devDependencies:
       '@types/node':
         specifier: ^26.4.0
@@ -707,6 +714,10 @@ packages:
 
   caniuse-lite@1.0.30001810:
     resolution: {integrity: sha512-TITQPUkaz+aVk5GL6NhOdwk1aEaNTSDPsGFWrTuhKGtjTF70jL/Oht2W4c6rXUe5fu7Ie19VIahAXHIIiWWNeg==}
+
+  chalk@6.0.0:
+    resolution: {integrity: sha512-2uNTXIuTTxk7ciZgAU1BQcgnchcG0xXnrs6jzkQfj9SsRa9M2s5zE8WT96hS6KmG4MzWHSrvH43DF1m4XRkrFg==}
+    engines: {node: '>=22'}
 
   change-case@5.4.4:
     resolution: {integrity: sha512-HRQyTk2/YPEkt9TnUPbOpr64Uw3KOicFWPVBb+xiHvd6eBx/qPr9xqfBFDT8P2vWsvvz4jbEkfDe71W3VyNu2w==}
@@ -1485,6 +1496,9 @@ packages:
   quote-js-string@0.1.0:
     resolution: {integrity: sha512-Y3NoRtprEEZQD8RfxMCfS0ZTqc4e+i18OrXEXAvpM6TfC/3y+0L5rNbZiSnbBBEkDfFzbpd8o+cE8q3/anjMGA==}
     engines: {node: '>=22'}
+
+  randomcolor@0.6.2:
+    resolution: {integrity: sha512-Mn6TbyYpFgwFuQ8KJKqf3bqqY9O1y37/0jgSK/61PUxV4QfIMv0+K2ioq8DfOjkBslcjwSzRfIDEXfzA9aCx7A==}
 
   refa@0.12.1:
     resolution: {integrity: sha512-J8rn6v4DBb2nnFqkqwy6/NnTYMcgLA+sLr0iIO41qpv0n+ngb7ksag2tMRl0inb1bbO/esUwzW1vbJi7K0sI0g==}
@@ -2422,6 +2436,8 @@ snapshots:
 
   caniuse-lite@1.0.30001810: {}
 
+  chalk@6.0.0: {}
+
   change-case@5.4.4: {}
 
   ci-info@4.4.0: {}
@@ -3351,6 +3367,8 @@ snapshots:
   queue-microtask@1.2.3: {}
 
   quote-js-string@0.1.0: {}
+
+  randomcolor@0.6.2: {}
 
   refa@0.12.1:
     dependencies:
