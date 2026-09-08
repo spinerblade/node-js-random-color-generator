@@ -49,24 +49,33 @@ const color = chalk.hex(hexColor);
 // Logic
 
 // No input, random color
-if (!hue || !luminosity) {
+if (!hue) {
   console.log(color(makeHexBlock(hexColor)));
-} else {
-  // Unknown input and error message
-  if (
-    (hue !== 'green' && hue !== 'red' && hue !== 'blue') ||
-    (luminosity !== 'light' && luminosity !== 'dark')
-  ) {
-    console.log(
-      `Unknown Input ${hue} | ${luminosity}: First input needs to be hue. Use the key words "green", "red" or "blue". Second Input needs to be luminosity. Use the keywords "light" or "dark"`,
-    );
-  }
-  // User input given, specific random color
-  else {
-    const colorSpecific = randomColor({
-      luminosity: luminosity,
-      hue: hue,
-    });
-    console.log(chalk.hex(colorSpecific)(makeHexBlock(hexColor)));
-  }
+}
+// Unknown input and error message
+else if (
+  (hue !== 'green' &&
+    hue !== 'red' &&
+    hue !== 'blue' &&
+    hue !== 'orange' &&
+    hue !== 'yellow' &&
+    hue !== 'purple' &&
+    hue !== 'pink' &&
+    hue !== 'monochrome') ||
+  (luminosity !== undefined &&
+    luminosity !== 'light' &&
+    luminosity !== 'dark' &&
+    luminosity !== 'bright')
+) {
+  console.log(
+    `Unknown Input ${hue} | ${luminosity}: First input needs to be hue. Use the key words "red", "orange", "yellow", "green", "blue", "purple", "pink" or "monochrome". Second Input needs to be luminosity. Use the keywords "light", "dark" or "bright"`,
+  );
+}
+// User input given, specific random color
+else {
+  const colorSpecific = randomColor({
+    luminosity: luminosity,
+    hue: hue,
+  });
+  console.log(chalk.hex(colorSpecific)(makeHexBlock(colorSpecific)));
 }
